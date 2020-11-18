@@ -70,7 +70,7 @@ class global AdditivePartial extends SinOsc {
 
     #! This method is not intended to be overridden.
 
-    fun void play( dur duration )
+    fun final void play( dur duration )
     {
         controlDur() => const dur step;
         now => const time start;
