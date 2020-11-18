@@ -10,7 +10,7 @@ class global Additive extends UsrUGen {
     {
         new AdditivePartial @=> ref AdditivePartial ap;
         ap.init(partialNumber, baseFreq, noteAmplitude);
-        ap => outlet;
+        ap => chan(0);
         return ap;
     }
 
