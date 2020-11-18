@@ -1,8 +1,8 @@
-new AdditiveSqrTri @=> AdditiveSqrTri a;
+new AdditiveSqrTri @=> ref AdditiveSqrTri a;
 a => dac;
 a.init(55.0, 0.1, 0.25);
 
-new AdditiveSqrTri @=> AdditiveSqrTri b;
+new AdditiveSqrTri @=> ref AdditiveSqrTri b;
 b => dac;
 b.init(82.5, 0.1, 0.25);
 

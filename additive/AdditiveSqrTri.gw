@@ -1,9 +1,9 @@
 class global AdditiveSqrTri extends Additive {
-    float detune;
+    var float detune;
 
     fun AdditivePartial initPartial(int partialNumber)
     {
-        new AdditivePartialSqrTri @=> AdditivePartialSqrTri apst;
+        new AdditivePartialSqrTri @=> ref AdditivePartialSqrTri apst;
         apst.init(partialNumber, baseFreq, noteAmplitude, detune);
         apst => outlet;
         return apst;

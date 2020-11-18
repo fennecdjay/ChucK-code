@@ -1,8 +1,8 @@
-new Additive @=> Additive a;
+new Additive @=> ref Additive a;
 a => dac;
 a.init(220.0, 0.1);
 
-new Additive @=> Additive b;
+new Additive @=> ref Additive b;
 b => dac;
 b.init(275.0, 0.1);
 

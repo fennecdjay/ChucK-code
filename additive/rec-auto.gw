@@ -2,7 +2,7 @@
 #! example> chuck foo.gw bar.ck rec (see also rec2.ck)
 
 #! pull samples from the dac
-dac => Gain g => WvOut w => blackhole;
+dac => var Gain g => var WvOut w => blackhole;
 
 #! set the prefix, which will prepended to the filename
 #! do this if you want the file to appear automatically

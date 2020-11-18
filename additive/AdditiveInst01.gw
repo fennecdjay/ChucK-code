@@ -1,11 +1,11 @@
 class global AdditiveInst01 extends Additive {
 
-    dur peakLoc, susLoc;
+    var dur peakLoc, susLoc;
 
 
     fun AdditivePartial initPartial(int partialNumber)
     {
-        new AdditivePartialInst01 @=> AdditivePartialInst01 api01;
+        new AdditivePartialInst01 @=> ref AdditivePartialInst01 api01;
         api01.init(partialNumber, baseFreq, noteAmplitude, peakLoc, susLoc, numPartials());
         api01 => outlet;
         return api01;

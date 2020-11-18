@@ -1,7 +1,7 @@
 class global AdditivePartialInst01 extends AdditivePartial {
 
-    dur peakLoc, switchEnvLoc, susLoc;
-    float peakAmplitude, susAmplitude, peakLocSec, susLocSec, exponent;
+    var dur peakLoc, switchEnvLoc, susLoc;
+    var float peakAmplitude, susAmplitude, peakLocSec, susLocSec, exponent;
 
     fun void init( int partialNumber, float baseFreq, float noteAmplitude, 
                    dur basePeakLoc, dur susLoc, int numPartials)
@@ -16,7 +16,7 @@ class global AdditivePartialInst01 extends AdditivePartial {
 
         #! This will work well when susLoc >> 2*peakLoc, otherwise, maaaybe not.
         peakLoc => switchEnvLoc;
-        for (peakLoc => dur loc; loc <= 2*peakLoc; controlDur() +=> loc) {
+        for (peakLoc => var dur loc; loc <= 2*peakLoc; controlDur() +=> loc) {
             if (env2(loc, susLoc) > env1(loc, susLoc)) {
                 loc => switchEnvLoc;
                 break;
@@ -31,19 +31,19 @@ class global AdditivePartialInst01 extends AdditivePartial {
 
     fun float env1( dur timeLoc, dur duration )
     {
-        peakAmplitude * Math.sin(0.5 * Math.PI * (duration/peakLoc)) => float env;
+        peakAmplitude * Math.sin(0.5 * Math.PI * (duration/peakLoc)) => const float env;
         return env;
     }
 
     fun float env2( dur timeLoc, dur duration ) {
-        timeLoc/1::second => float timeLocSec;
-        peakAmplitude * Math.pow(exponent, timeLocSec - peakLocSec) => float env;
+        timeLoc/1::second => const float timeLocSec;
+        peakAmplitude * Math.pow(exponent, timeLocSec - peakLocSec) => const float env;
         return env;
     }
 
     fun float partialAmplitude( dur timeLoc, dur duration )
     {
-        0 => float env;
+        0 => var float env;
         if ( timeLoc < switchEnvLoc ) {
             env1(timeLoc, duration) => env;
         }
@@ -53,7 +53,7 @@ class global AdditivePartialInst01 extends AdditivePartial {
         else {
             susAmplitude => env;
         }
-        0.2::second => dur fade;
+        0.2::second => const dur fade;
         if (timeLoc > (duration - fade)) {
             (duration - timeLoc)/fade *=> env;
         }

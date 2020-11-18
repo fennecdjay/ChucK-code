@@ -1,16 +1,16 @@
-new AdditiveInst01 @=> AdditiveInst01 a;
+new AdditiveInst01 @=> ref AdditiveInst01 a;
 a => dac;
 a.init(110.0, 0.1, 1.6::second, 3::second);
 
-new AdditiveInst01 @=> AdditiveInst01 b;
+new AdditiveInst01 @=> ref AdditiveInst01 b;
 b => dac;
 b.init(137.5, 0.1, 0.8::second, 3::second);
 
-new AdditiveInst01 @=> AdditiveInst01 c;
+new AdditiveInst01 @=> ref AdditiveInst01 c;
 c => dac;
 c.init(165.0, 0.1, 0.4::second, 3::second);
 
-new AdditiveInst01 @=> AdditiveInst01 d;
+new AdditiveInst01 @=> ref AdditiveInst01 d;
 d => dac;
 d.init(192.5, 0.1, 0.2::second, 3::second);
 

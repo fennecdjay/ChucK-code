@@ -4,11 +4,11 @@ class global AdditivePartial extends SinOsc {
     #! We will drop partials that start higher than this, and set gain
     #! to zero if it's exceeded during a partial sounding.
 
-    (1::second/1::samp) * 0.499 => float MAX_FREQUENCY;
+    (1::second/1::samp) * 0.499 => var float MAX_FREQUENCY;
 
-    int partialNumber;
-    float baseFreq;
-    float noteAmplitude;
+    var int partialNumber;
+    var float baseFreq;
+    var float noteAmplitude;
 
     fun void init( int partialNumber, float baseFreq, float noteAmplitude ) 
     {
@@ -37,8 +37,8 @@ class global AdditivePartial extends SinOsc {
 
     fun float partialAmplitude( dur timeLoc, dur duration )
     {
-        0.5 * Math.pow(partialNumber, -2.0) => float maxGain;
-        0.1::second => dur fadeTime;
+        0.5 * Math.pow(partialNumber, -2.0) => const float maxGain;
+        0.1::second => const dur fadeTime;
         if (timeLoc < fadeTime) {
             return maxGain * (timeLoc/fadeTime);
         }
@@ -69,11 +69,11 @@ class global AdditivePartial extends SinOsc {
 
     fun void play( dur duration )
     {
-        controlDur() => dur step;
-        now => time start;
-        now - start => dur timeLoc;
+        controlDur() => const dur step;
+        now => const time start;
+        now - start => var dur timeLoc;
         while (timeLoc < duration) {
-            this.partialFrequency(timeLoc, duration) => float frequency;
+            this.partialFrequency(timeLoc, duration) => const float frequency;
             if (frequency < MAX_FREQUENCY) {
                 frequency => this.freq;
                 noteAmplitude * partialAmplitude(timeLoc, duration) => this.gain;

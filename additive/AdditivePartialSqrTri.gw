@@ -1,6 +1,6 @@
 class global AdditivePartialSqrTri extends AdditivePartial {
 
-    float detune;
+    var float detune;
 
     fun void init( int partialNumber, float baseFreq, float noteAmplitude, float detune )
     {
@@ -10,7 +10,7 @@ class global AdditivePartialSqrTri extends AdditivePartial {
 
     fun float partialFrequency(dur timeLoc, dur duration )
     {
-        baseFreq * (2*partialNumber - 1) => float f;
+        baseFreq * (2*partialNumber - 1) => var float f;
         if (partialNumber % 2 == 0) {
             detune -=> f;
         } else {
