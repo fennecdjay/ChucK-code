@@ -5,7 +5,7 @@ class global AdditivePartialInst01 extends AdditivePartial {
     var dur peakLoc, switchEnvLoc, susLoc;
     var float peakAmplitude, susAmplitude, peakLocSec, susLocSec, exponent;
 
-    fun void init( int partialNumber, float baseFreq, float noteAmplitude, 
+    fun void init( int partialNumber, float baseFreq, float noteAmplitude,
                    dur basePeakLoc, dur susLoc, int numPartials)
     {
         this.init(partialNumber, baseFreq, noteAmplitude);

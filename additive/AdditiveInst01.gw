@@ -7,11 +7,11 @@ class global AdditiveInst01 extends Additive {
     {
         new AdditivePartialInst01 @=> ref AdditivePartialInst01 api01;
         api01.init(partialNumber, baseFreq, noteAmplitude, peakLoc, susLoc, numPartials());
-        api01 => outlet;
+        api01 => chan(0);
         return api01;
     }
 
-    fun void init(float baseFreq, float noteAmplitude, dur peakLoc, dur susLoc) 
+    fun void init(float baseFreq, float noteAmplitude, dur peakLoc, dur susLoc)
     {
         peakLoc => this.peakLoc;
         susLoc => this.susLoc;

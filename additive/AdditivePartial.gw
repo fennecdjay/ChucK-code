@@ -13,7 +13,7 @@ class global AdditivePartial extends SinOsc {
     var float baseFreq;
     var float noteAmplitude;
 
-    fun void init( int partialNumber, float baseFreq, float noteAmplitude ) 
+    fun void init( int partialNumber, float baseFreq, float noteAmplitude )
     {
         partialNumber => this.partialNumber;
         baseFreq => this.baseFreq;
@@ -31,7 +31,7 @@ class global AdditivePartial extends SinOsc {
         return 16::samp;
     }
 
-    #! The relative amplitude of the Nth partial, in a range from 0 to 1. Note that even though 
+    #! The relative amplitude of the Nth partial, in a range from 0 to 1. Note that even though
     #! noteAmplitude (the gain for the entire composite note) is passed in, we don't scale by that value
     #! here. That is just provided so that louder notes can have a different timbre than quieter
     #! ones (e.g. be brighter).
