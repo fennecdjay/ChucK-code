@@ -13,8 +13,8 @@ class global AdditivePartialInst01 extends AdditivePartial {
         peakLoc/1::second => peakLocSec;
         susLoc/1::second => susLocSec;
         Math.pow(susAmplitude/peakAmplitude, 1.0/(susLocSec - peakLocSec)) => exponent;
-    
-        // This will work well when susLoc >> 2*peakLoc, otherwise, maaaybe not.
+
+        #! This will work well when susLoc >> 2*peakLoc, otherwise, maaaybe not.
         peakLoc => switchEnvLoc;
         for (peakLoc => dur loc; loc <= 2*peakLoc; controlDur() +=> loc) {
             if (env2(loc, susLoc) > env1(loc, susLoc)) {
