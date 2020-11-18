@@ -2,7 +2,7 @@ class global Additive extends UsrUGen {
 
     var float baseFreq;
     var float noteAmplitude;
-    AdditivePartial @ partial[numPartials()];
+    ref AdditivePartial partial[numPartials()];
 
     fun int numPartials() { return 25; }
 
