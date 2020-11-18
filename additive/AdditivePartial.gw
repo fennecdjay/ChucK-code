@@ -18,7 +18,7 @@ class global AdditivePartial extends SinOsc {
         baseFreq => this.baseFreq;
         noteAmplitude => this.noteAmplitude;
         #! be silent until play() is called
-        0 => this.gain;
+        0 => this.amp;
         0 => this.freq;
     }
 
@@ -78,15 +78,15 @@ class global AdditivePartial extends SinOsc {
             this.partialFrequency(timeLoc, duration) => const float frequency;
             if (frequency < MAX_FREQUENCY) {
                 frequency => this.freq;
-                noteAmplitude * partialAmplitude(timeLoc, duration) => this.gain;
+                noteAmplitude * partialAmplitude(timeLoc, duration) => this.amp;
             } else {
-                0 => this.gain;
+                0 => this.amp;
             }
             step => now;
             now - start => timeLoc;
         }
         #! return to silence now that play() is complete
-        0 => this.gain;
+        0 => this.amp;
         0 => this.freq;
     }
 }
