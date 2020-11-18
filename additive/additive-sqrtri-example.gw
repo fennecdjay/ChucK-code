@@ -1,7 +1,7 @@
 #require Machine
 
-Machine.add("${me.dir()}/AdditivePartial.ck");
-Machine.add("${me.dir()}/Additive.ck");
-Machine.add("${me.dir()}/AdditivePartialSqrTri.ck");
-Machine.add("${me.dir()}/AdditiveSqrTri.ck");
-Machine.add("${me.dir()}/additive-sqrtri-example-score.ck");
+Machine.add("${me.dir()}/AdditivePartial.gw");
+Machine.add("${me.dir()}/Additive.gw");
+Machine.add("${me.dir()}/AdditivePartialSqrTri.gw");
+Machine.add("${me.dir()}/AdditiveSqrTri.gw");
+Machine.add("${me.dir()}/additive-sqrtri-example-score.gw");
