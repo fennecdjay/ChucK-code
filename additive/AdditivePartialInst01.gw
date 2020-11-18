@@ -33,7 +33,7 @@ class global AdditivePartialInst01 extends AdditivePartial {
 
     fun float env1( dur timeLoc, dur duration )
     {
-        peakAmplitude * Math.sin(0.5 * Math.PI * (duration/peakLoc)) => const float env;
+        peakAmplitude * Math.sin(0.5 * pi * (duration/peakLoc)) => const float env;
         return env;
     }
 
