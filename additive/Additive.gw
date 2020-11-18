@@ -17,7 +17,7 @@ class global Additive extends Chubgraph {
     fun void play(dur duration)
     {
         for(0 => int i; i < numPartials(); i++) {
-            spork ~ partial[i].play(duration);
+            spork partial[i].play(duration);
         }
         duration => now;
     }
