@@ -18,7 +18,7 @@ class global AdditivePartialInst01 extends AdditivePartial {
 
         #! This will work well when susLoc >> 2*peakLoc, otherwise, maaaybe not.
         peakLoc => switchEnvLoc;
-        for (peakLoc => var dur loc; loc <= 2*peakLoc; controlDur() +=> loc) {
+        for (peakLoc => var dur loc; loc <= 2::peakLoc; controlDur() +=> loc) {
             if (env2(loc, susLoc) > env1(loc, susLoc)) {
                 loc => switchEnvLoc;
                 break;
