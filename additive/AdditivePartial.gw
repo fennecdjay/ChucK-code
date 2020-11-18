@@ -1,3 +1,5 @@
+#require Modules
+
 class global AdditivePartial extends SinOsc {
 
     #! Set a MAX_FREQUENCY value that's just below the Nyquist rate.
