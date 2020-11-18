@@ -1,4 +1,4 @@
-public class AdditivePartialSqrTri extends AdditivePartial {
+class global AdditivePartialSqrTri extends AdditivePartial {
 
     float detune;
 

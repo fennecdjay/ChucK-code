@@ -1,4 +1,4 @@
-public class AdditiveSqrTri extends Additive {
+class global AdditiveSqrTri extends Additive {
     float detune;
 
     fun AdditivePartial initPartial(int partialNumber)

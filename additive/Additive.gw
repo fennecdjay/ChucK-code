@@ -1,4 +1,4 @@
-public class Additive extends Chubgraph {
+class global Additive extends Chubgraph {
 
     float baseFreq;
     float noteAmplitude;

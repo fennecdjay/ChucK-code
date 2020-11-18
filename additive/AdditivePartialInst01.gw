@@ -1,4 +1,4 @@
-public class AdditivePartialInst01 extends AdditivePartial {
+class global AdditivePartialInst01 extends AdditivePartial {
 
     dur peakLoc, switchEnvLoc, susLoc;
     float peakAmplitude, susAmplitude, peakLocSec, susLocSec, exponent;

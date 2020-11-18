@@ -1,4 +1,4 @@
-public class AdditiveInst01 extends Additive {
+class global AdditiveInst01 extends Additive {
 
     dur peakLoc, susLoc;
 
