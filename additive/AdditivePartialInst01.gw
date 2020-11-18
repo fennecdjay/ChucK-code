@@ -1,3 +1,5 @@
+#require Math
+
 class global AdditivePartialInst01 extends AdditivePartial {
 
     var dur peakLoc, switchEnvLoc, susLoc;

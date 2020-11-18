@@ -1,3 +1,4 @@
+#require Math
 #require Modules
 
 class global AdditivePartial extends SinOsc {
