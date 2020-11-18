@@ -1,4 +1,4 @@
-class global Additive extends Chubgraph {
+class global Additive extends UsrUGen {
 
     var float baseFreq;
     var float noteAmplitude;
